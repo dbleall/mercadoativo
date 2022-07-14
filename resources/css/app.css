@@ -835,7 +835,35 @@ body {
   .portfolio .portfolio-wrap:hover .portfolio-info {
     opacity: 1;
   }
-  
+  /*hack*/
+  .portfolio #portfolio-flters2 {
+    padding: 0;
+    margin: 0 auto 20px auto;
+    list-style: none;
+    text-align: center;
+  }
+  .portfolio #portfolio-flters2 li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 8px 15px 10px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #444444;
+    margin-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 3px;
+  }
+  .portfolio #portfolio-flters2 li:hover, .portfolio #portfolio-flters2 li.filter-active {
+    color: #fff;
+    background: #ff00ff;
+  }
+  .portfolio #portfolio-flters2 li:last-child {
+    margin-right: 0;
+  }
+
+
   /*--------------------------------------------------------------
   # Portfolio Details
   --------------------------------------------------------------*/

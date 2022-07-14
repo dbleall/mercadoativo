@@ -9,12 +9,13 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto" href="{{ url('/') }}#hero">Principal</a></li>
+          <li><a class="nav-link scrollto " href="{{ url('/') }}#hero">Principal</a></li>
           <li><a class="nav-link scrollto" href="{{ url('/') }}#about">Quem Somos</a></li>
-          <li><a class="nav-link scrollto" href="{{ url('/') }}#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto " href="{{ url('/') }}#clients">Clientes</a></li>
+          <li><a class="nav-link scrollto " href="{{ url('/') }}#portfolio">Portfolio</a></li>
           {{-- <li><a class="nav-link scrollto" href="#team">Equipe</a></li> --}}
           {{-- <li><a href="blog.html">Blog</a></li> --}}
-          <li class="dropdown active"><a href="#"><span>Serviços</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown active "><a href="#"><span>Serviços</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               {{-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
@@ -69,17 +70,20 @@
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
            <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-acrilico">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-10.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Quarto</h4>
-                <p>Acrílico</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-10.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Quarto Acrílico"><i class="bx bx-zoom-in"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
+            
+            @foreach ($acrilicos as $acrilico)
+              <div class="portfolio-wrap">
+                <img src="{{ Voyager::image($acrilico->image) }}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>{{ $acrilico->title }}</h4>
+                  <p>{{ $acrilico->description }}</p>
+                  <div class="portfolio-links">
+                    <a href="{{ Voyager::image($acrilico->image) }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{ $acrilico->title }}"><i class="bx bx-zoom-in"></i></a>
+                    {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
+                  </div>
                 </div>
               </div>
-            </div>
+            @endforeach
           </div>
           
         </div>

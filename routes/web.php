@@ -2,6 +2,15 @@
 
 use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
+use App\Client;
+use App\Portfolio;
+use App\Service;
+use App\Acrilico;
+use App\ComunicacaoInterna;
+use App\ComunicaoExterna;
+use App\Envelopamento;
+use App\Personalizado;
+use App\Impresso;
 
 
 
@@ -14,35 +23,49 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 | 
-*/ 
+*/
 
 Route::get('/', function () {
-    return view('home');
+    $clients = Client::all();
+    $services = Service::all();
+    $portfolios = Portfolio::all();
+    return view('home', compact('clients', 'services', 'portfolios'));
 });
+
+
 Route::get('services/acrilicos', function () {
-    return view('services.acrilicos');
-});
-Route::get('services/comunicacao_externa', function () {
-    return view('services.comunicacao_externa');
+    $acrilicos = Acrilico::all();
+    return view('services.acrilicos', compact('acrilicos'));
 });
 
 Route::get('services/comunicacao_interna', function () {
-    return view('services.comunicacao_interna');
+    $comunicacao_internas = ComunicacaoInterna::all();
+    return view('services.comunicacao_interna', compact('comunicacao_internas'));
 });
 
+
+Route::get('services/comunicacao_externa', function () {
+    $comunicacao_externas = ComunicaoExterna::all();
+    return view('services.comunicacao_externa', compact('comunicacao_externas'));
+});
+
+
 Route::get('services/envelopamento', function () {
-    return view('services.envelopamento');
+    $envelopamentos = Envelopamento::all();
+    return view('services.envelopamento', compact('envelopamentos'));
 });
 
 Route::get('services/impressos', function () {
-    return view('services.impressos');
+    $impressos = Impresso::all();
+    return view('services.impressos', compact('impressos'));
 });
 
 Route::get('services/personalizados', function () {
-    return view('services.personalizados');
+    $personalizados = Personalizado::all();
+    return view('services.personalizados', compact('personalizado'));
 });
 
-Route::post('/send-message',[ContactController::class, 'sendEmail'])->name('contact.send'); 
+Route::post('/send-message', [ContactController::class, 'sendEmail'])->name('contact.send');
 
 
 Route::group(['prefix' => 'admin'], function () {

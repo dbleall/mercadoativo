@@ -11,6 +11,7 @@
         <ul>
           <li><a class="nav-link scrollto " href="{{ url('/') }}#hero">Principal</a></li>
           <li><a class="nav-link scrollto" href="{{ url('/') }}#about">Quem Somos</a></li>
+          <li><a class="nav-link scrollto " href="{{ url('/') }}#clients">Clientes</a></li>
           <li><a class="nav-link scrollto " href="{{ url('/') }}#portfolio">Portfolio</a></li>
           {{-- <li><a class="nav-link scrollto" href="#team">Equipe</a></li> --}}
           {{-- <li><a href="blog.html">Blog</a></li> --}}

@@ -1,10 +1,8 @@
 @section('nav_internas')
    <!-- ======= Header ======= -->
    <header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container d-flex align-items-center">
-      
-      <a href="{{ url('/') }}" class="logo me-auto"><img src="{{ asset('img/logo.png') }}" alt=""></a>
-
+    <div class="container d-flex align-items-center">      
+      <a href="{{ url('/') }}" class="logo me-auto"><img src="{{ setting('site.logo') }}" alt=""></a>
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto active" href="{{ url('/') }}#hero">Principal</a></li>

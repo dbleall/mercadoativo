@@ -17,6 +17,7 @@
           <ul>
             <li><a class="nav-link scrollto active" href="#hero">Principal</a></li>
             <li><a class="nav-link scrollto" href="#about">Quem Somos</a></li>
+            <li><a class="nav-link scrollto " href="#clients">Clientes</a></li>
             <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
             {{-- <li><a class="nav-link scrollto" href="#team">Equipe</a></li> --}}
             {{-- <li><a href="blog.html">Blog</a></li> --}}
@@ -56,14 +57,12 @@
 
         <!-- ======= Counts Section ======= -->
         <section id="counts" class="counts">
-          <div class="container" data-aos="fade-up">
-    
-            <div class="row">
-    
+          <div class="container" data-aos="fade-up">    
+            <div class="row">    
               <div class="col-lg-3 col-md-6">
                 <div class="count-box">
                   <i class="bi bi-facebook"></i>
-                  <span data-purecounter-start="0" data-purecounter-end="93" data-purecounter-duration="1" class="purecounter"></span>
+                  <span data-purecounter-start="0" data-purecounter-end="{{ setting('site.curtidas') }}" data-purecounter-duration="1" class="purecounter"></span>
                   <p>Curtidas</p>
                 </div>
               </div>
@@ -71,7 +70,7 @@
               <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
                 <div class="count-box">
                   <i class="bi bi-instagram"></i>
-                  <span data-purecounter-start="0" data-purecounter-end="302" data-purecounter-duration="1" class="purecounter"></span>
+                  <span data-purecounter-start="0" data-purecounter-end="{{ setting('site.seguidores') }}" data-purecounter-duration="1" class="purecounter"></span>
                   <p>Seguidores</p>
                 </div>
               </div>
@@ -80,7 +79,7 @@
               <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
                 <div class="count-box">
                   <i class="bi bi-cup"></i>
-                  <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+                  <span data-purecounter-start="0" data-purecounter-end="{{ setting('site.copos_de_cafe') }}" data-purecounter-duration="1" class="purecounter"></span>
                   <p>Copos de café</p>
                 </div>
               </div>
@@ -88,7 +87,7 @@
               <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
                 <div class="count-box">
                   <i class="bi bi-lightbulb"></i>
-                  <span data-purecounter-start="0" data-purecounter-end="515" data-purecounter-duration="1" class="purecounter"></span>
+                  <span data-purecounter-start="0" data-purecounter-end="{{ setting('site.boas_ideias') }}" data-purecounter-duration="1" class="purecounter"></span>
                   <p>Boas ideias</p>
                 </div>
               </div>
@@ -105,9 +104,9 @@
         <div class="row no-gutters">
           <div class="content col-xl-5 d-flex align-items-stretch">
             <div class="content">
-              <h3>QUEM SOMOS</h3>
+              <h3>{{ setting('site.quem_somos')}}</h3>
               <p>
-                Mercado Ativo - Marketing, Comunicação Visual e Gráfica é uma empresa sediada em Marabá, com 5 anos de atuação na área de gestão estratégica de marketing.
+               {{ setting('site.texto_quem_somos') }}
               </p>
               <a href="#contact" class="about-btn"><span>Contato</span> <i class="bx bx-chevron-right"></i></a>
             </div>
@@ -117,23 +116,23 @@
               <div class="row">
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
                   <i class="bx bx-timer"></i>
-                  <h4>Agora, também</h4>
-                  <p>atuando na área de Comunicação Visual, com o intuito de desenvolver trabalhos integrados nos diversos segmentos de comunicação estratégica:</p>
+                  <h4>{{ setting('site.titulo2')}}</h4>
+                  <p>{{ setting('site.texto2')}}</p>
                 </div>
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
                   <i class="bx bx-cube-alt"></i>
-                  <h4>Planejamento estratégico de marketing;</h4>
-                  <p>Design gráfico, Impressos Gráficos, Carimbos, Comunicação Visual.</p>
+                  <h4>{{ setting('site.titulo3')}}</h4>
+                  <p>{{ setting('site.texto3')}}</p>
                 </div>
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
                   <i class="bx bx-images"></i>
-                  <h4>Nosso objetivo</h4>
-                  <p>é atender nossos clientes de forma qualitativa e comprometida.</p>
+                  <h4>{{ setting('site.titulo4')}}</h4>
+                  <p>{{ setting('site.texto4')}}</p>
                 </div>
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
                   <i class="bx bx-shield"></i>
-                  <h4>Especializada em</h4>
-                  <p>Impressões digitais e gráfica on</p>
+                  <h4>{{ setting('site.titulo4')}}</h4>
+                  <p>{{ setting('site.texto5')}}</p>
                 </div>
               </div>
             </div><!-- End .content-->
@@ -153,45 +152,12 @@
       </div>
       <div class="container" data-aos="zoom-in">
         <div class="row d-flex flex-row justify-content-center">
-            <div class="col-lg-2 col-md-2 col-sm-12 img-fluid clients-wrap m-3">
-              <a href="http://www.acimmaraba.com.br/novosite/" target="_blank"><img src="{{ asset('img/clients/acim.png') }}" alt=""></a>
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-12 img-fluid clients-wrap m-3">
-              <a href="https://www.facebook.com/amazoniaferroeaco/" target="_blank"><img src="{{ asset('img/clients/amazonia.png') }}" alt=""></a>
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-12 img-fluid clients-wrap m-3">
-              <a href="#contact" target="_blank"><img src="{{ asset('img/clients/so_falta_voce.png') }}" alt=""></a>
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-12 img-fluid clients-wrap m-3">
-              <a href="https://www.banpara.b.br/" target="_blank"><img src="{{ asset('img/clients/banpara.png') }}" alt=""></a>
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-12 img-fluid clients-wrap m-3">
-              <a href="http://www.cacss.com.br/" target="_blank"><img src="{{ asset('img/clients/cacss.png') }}" alt=""></a>
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-12 img-fluid clients-wrap m-3">
-              <a href="https://blog.carajasonline.com/" target="_blank"><img src="{{ asset('img/clients/carajas.png') }}" alt=""></a>
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-12 img-fluid clients-wrap m-3">
-              <a href="https://www.destinarambiental.com.br/" target="_blank"><img src="{{ asset('img/clients/destinar.png') }}" alt=""></a>
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-12 img-fluid clients-wrap m-3">
-              <a href="https://www.facimpa.edu.br/" target="_blank"><img src="{{ asset('img/clients/faculdade_de_medicina_maraba.png') }}" alt=""></a>
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-12 img-fluid clients-wrap m-3">
-              <a href="https://www.sebrae.com.br/sites/PortalSebrae" target="_blank"><img src="{{ asset('img/clients/sebrae.png') }}" alt=""></a>
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-12 img-fluid clients-wrap m-3">
-              <a href="https://sindicom.com.br/" target="_blank"><img src="{{ asset('img/clients/sindicom.png') }}" alt=""></a>
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-12 img-fluid clients-wrap m-3">
-              <a href="https://www.tbl.com.br/" target="_blank"><img src="{{ asset('img/clients/tbl_bertolini.png') }}" alt=""></a>
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-12 img-fluid clients-wrap m-3">
-              <a href="https://www.facebook.com/Tocarisorvetesmaraba" target="_blank"><img src="{{ asset('img/clients/tocari.png') }}" alt=""></a>
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-12 img-fluid clients-wrap m-3">
-              <a href="https://www.unimed.coop.br/site/" target="_blank"><img src="{{ asset('img/clients/unimed.png') }}" alt=""></a>
-            </div>
+            @foreach ($clients as $client)
+              <div class="col-lg-2 col-md-2 col-sm-12 img-fluid clients-wrap m-3">
+                <a href="{{ $client->link }}" target="_blank"><img src="{{ Voyager::image($client->image) }}" alt="{{ $client->name }}"></a>
+              </div>
+            @endforeach
+
         </div>
         {{-- <div class="clients-slider swiper">
           <div class="swiper-wrapper align-items-center">
@@ -357,50 +323,18 @@
         </div>
 
         <div class="row">
-          <div class="col-md-6">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-              <img src="{{ asset('img/servicos/envelopamento.png') }}" alt="" style="float:left; max-width:100px;margin-right:10px" >
-              <h4><a href="#">Envelopamento</a></h4>
-              <p>​​​Possuímos experiência na utilização de adesivos desde a impressão até a aplicação correta do adesivo com a logo da empresa até o envelopamento total do veículo em impressão digital.</p>
-            </div>
-          </div>
-          <div class="col-md-6 mt-4 mt-md-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-              <img src="{{ asset('img/servicos/comunicacao_interna.png') }}" alt="" style="float:left; max-width:100px;margin-right:10px" >
-              <h4><a href="#">Comunicação interna</a></h4>
-              <p>Confeccionados em lona ou tecido, com adesivos recortados ou imagens digitais. Produzimos diversos modelos para utilização interna em eventos, apresentações, promoções ou a própria loja.</p>
-            </div>
-          </div>
-          <div class="col-md-6 mt-4 mt-md-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-              <img src="{{ asset('img/servicos/comunicacao_externa.png') }}" alt="" style="float:left; max-width:100px;margin-right:10px" >
-              <h4><a href="#">Comunicação externa</a></h4>
-              <p>Produzimos a estrutura com barras metalom, tendo iluminação direta ou não, revestidas de lona impressa com impressão digital ou adesivos em recorte eletrônico, podendo ser em chapa galvanizada e ACM.</p>
-            </div>
-          </div>
-          <div class="col-md-6 mt-4 mt-md-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
-              <img src="{{ asset('img/servicos/personalizados.png') }}" alt="" style="float:left; max-width:100px;margin-right:10px" >
-              <h4><a href="#">Personalizados</a></h4>
-              <p>Confeccionamos em várias cores e espessuras, utilizando materiais como chapas galvanizadas, isopor, PVC, aço inox, acrílicos, MDF, podendo, tambem, ser iluminadas direta ou indiretamente.</p>
-            </div>
-          </div>
-          <div class="col-md-6 mt-4 mt-md-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="500">
-              <img src="{{ asset('img/servicos/acrilicos.png') }}" alt="" style="float:left; max-width:100px; margin-right:10px"  >
-              <h4><a href="#">Acrílicos</a></h4>
-              <p>Produzimos em PVC, acrílico, ACM, MDF, inox ou chapa galvanizada, podendo ser adesivadas em recorte eletrônico, imagens digitais ou em baixo relevo ou lona.</p>
-            </div>
-          </div>
-          <div class="col-md-6 mt-4 mt-md-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="600">
-              <img src="{{ asset('img/servicos/impressos.png') }}" alt="" style="float:left; max-width:100px; margin-right:10px" >
-              <h4><a href="#">Impressos Gráficos</a></h4>
-              <p>Impressões de alta qualidade a preços acessíveis. Utilizamos as mais modernas ferramentas do setor para simplificar e agilizar o complexo processo de encomenda de impressos personalizados.</p>
-            </div>
-          </div>
-        </div>
+          @foreach ($services as $service)
+            <div class="col-md-6">
+              <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                <img src="{{ Voyager::image($service->image) }}" alt="" style="float:left; max-width:100px;margin-right:10px" >
+                <h4><a href="#">{{ $service->title }}</a></h4>
+                <p>{{ $service->description }} </p>
+              </div>
+            </div>   
+          @endforeach
 
+         
+        
       </div>
     </section><!-- End Services Section -->
 
@@ -415,7 +349,16 @@
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
+            <ul id="portfolio-flters2">
+              <li class="filter-active">Todos</li>
+              <li><a href="{{ url('services/acrilicos') }}">Acrílicos</a></li>              
+              <li><a href="{{ url('services/comunicacao_interna') }}">Comunicação Interna</a></li>
+              <li><a href="{{ url('services/comunicacao_externa') }}">Comunicação Externa</a></li>
+              <li><a href="{{ url('services/envelopamento') }}">Envelopamento</a></li>
+              <li><a href="{{ url('services/personalizados') }}">Personalizados</a></li>              
+              <li><a href="{{ url('services/impressos') }}">Impressos Gráficos</a></li>
+            </ul>
+            {{-- <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">Todos</li>
               <li data-filter=".filter-envelopamento">Envelopamento</li>
               <li data-filter=".filter-comunicacao_interna">Comunicação Interna</li>
@@ -423,495 +366,26 @@
               <li data-filter=".filter-personalizados">Personalizados</li>
               <li data-filter=".filter-acrilico">Acrílicos</li>
               <li data-filter=".filter-impressos">Impressos</li>
-            </ul>
+            </ul> --}}
           </div>
         </div>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-          <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-comunicacao_interna">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-1.jpg') }}"  class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Comunicação Interna</h4>
-                <p>Comunicação Interna</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-1.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Comunicação Interna"><i class="bx bx-plus"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">          
+          @foreach ($portfolios as $portfolio)
+            <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-comunicacao_interna">
+              <div class="portfolio-wrap">
+                <img src="{{ Voyager::image($portfolio->image) }}"  class="img-fluid" alt="{{ $portfolio->title }}">
+                <div class="portfolio-info">
+                  <h4>{{ $portfolio->title }}</h4>
+                  <p>{{ $portfolio->description }}</p>
+                  <div class="portfolio-links">
+                    <a href="{{ Voyager::image($portfolio->image) }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{$portfolio->title}}"><i class="bx bx-plus"></i></a>
+                    {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-comunicacao_interna">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-2.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Localiza</h4>
-                <p>Comunicação Interna</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-2.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Localiza"><i class="bx bx-plus"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-comunicacao_externa">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/so_falta_voce.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Só falta você</h4>
-                <p>Seja cliente</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/so_falta_voce.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Peg Pag"><i class="bx bx-plus"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-comunicacao_externa">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-3.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Peg Pag</h4>
-                <p>Comunicação Externa</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-3.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Peg Pag"><i class="bx bx-plus"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-        
-
-          <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-envelopamento">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-4.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Sport Mania</h4>
-                <p>Envelopamento</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-4.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sport Mania"><i class="bx bx-plus"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-envelopamento">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-5.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Veiculo Longo</h4>
-                <p>Envelopamento</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-5.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Veiculo Longo"><i class="bx bx-plus"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-comunicacao_externa">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-6.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>A Favorita</h4>
-                <p>Comunicação Externa</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-6.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="A Favorita"><i class="bx bx-plus"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-        
-
-          <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-comunicacao_externa">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-8.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>A Favorita</h4>
-                <p>Comunicação Externa</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-8.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="A Favorita"><i class="bx bx-plus"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-envelopamento">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-7.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Sk Net</h4>
-                <p>Envelopamento</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-7.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sk Net"><i class="bx bx-plus"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-comunicacao_interna">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-9.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Consulting</h4>
-                <p>Comunicacao_interna</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-9.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Consulting"><i class="bx bx-plus"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-       
-
-          <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-acrilico">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-10.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Quarto</h4>
-                <p>Acrílico</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-10.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Quarto Acrílico"><i class="bx bx-plus"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-comunicacao_externa">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-11.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>A Favorita</h4>
-                <p>Comunicação Externa</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-11.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="A Favorita"><i class="bx bx-plus"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-envelopamento">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-12.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Sul Pará</h4>
-                <p>Envelopamento</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-12.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sul Pará"><i class="bx bx-plus"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-        
-
-          <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-envelopamento">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-13.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>JCB</h4>
-                <p>Envelopamento</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-13.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="JCB"><i class="bx bx-plus"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-envelopamento">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-14.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>A1</h4>
-                <p>Envelopamento</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-14.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="A1"><i class="bx bx-plus"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-envelopamento">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-15.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>SK Net</h4>
-                <p>Envelopamento</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-15.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="SK Net"><i class="bx bx-plus"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-        
-
-          <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-comunicacao_interna">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-16.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Vivo</h4>
-                <p>Comunicação Interna</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-16.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Vivo"><i class="bx bx-plus"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-envelopamento">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-17.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>MabVida</h4>
-                <p>Envelopamento</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-17.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="MabVida"><i class="bx bx-plus"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-comunicacao_externa">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-18.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>MabVida</h4>
-                <p>Comunicação Externa</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-18.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="MabVida"><i class="bx bx-plus"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-       
-
-          <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-comunicacao_externa">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-19.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Consulting</h4>
-                <p>Comunicacao Externa</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-19.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Consulting"><i class="bx bx-plus"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-comunicacao_externa">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-20.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Unimed</h4>
-                <p>Comunicação Externa</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-20.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Unimed"><i class="bx bx-plus"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-comunicacao_externa">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-21.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Unimed</h4>
-                <p>Comunicação Externa</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-21.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Unimed"><i class="bx bx-plus"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-      
-
-          <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-comunicacao_externa">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-23.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Unimed</h4>
-                <p>Comunicação Externa</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-23.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Unimed"><i class="bx bx-plus"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-comunicacao_externa">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-22.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Invest Solar</h4>
-                <p>Comunicação Externa</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-22.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Invest Solar"><i class="bx bx-plus"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-comunicacao_externa">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-24.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Thiago's</h4>
-                <p>Comunicação Externa</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-24.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Thiago's"><i class="bx bx-plus"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-     
-
-          <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-comunicacao_interna">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-25.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Thiago's</h4>
-                <p>Comunicação Interna</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-25.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Thiago's"><i class="bx bx-plus"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-comunicacao_interna">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-26.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Ipiranga</h4>
-                <p>Comunicação Interna</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-26.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Ipiranga"><i class="bx bx-plus"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-comunicacao_externa">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-27.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Performance</h4>
-                <p>Comunicação Externa</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-27.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Performance"><i class="bx bx-plus"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-       
-
-          <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-comunicacao_interna">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-28.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Adventure Caça e Pesca</h4>
-                <p>Comunicação Interna</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-28.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Adventure Caça e Pesca"><i class="bx bx-plus"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-sm-12portfolio-item filter-comunicacao_interna">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-29.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Adventure Caça e Pesca</h4>
-                <p>Comunicação Interna</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-29.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Adventure Caça e Pesca"><i class="bx bx-plus"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-envelopamento">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-30.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Tocari</h4>
-                <p>Envelopamento</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-30.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Tocari"><i class="bx bx-plus"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-       
-
-          <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-comunicacao_externa">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-31.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Trifill</h4>
-                <p>Comunicação Externa</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-31.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Trifill"><i class="bx bx-plus"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-comunicacao_interna">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-32.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Hall</h4>
-                <p>Comunicação Interna</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-32.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Hall"><i class="bx bx-plus"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
+          @endforeach
         </div>
-
       </div>
     </section><!-- End Portfolio Section -->
 
@@ -1226,21 +700,21 @@
             <div class="info-box mb-4">
               <i class="bx bx-map"></i>
               <h3>Nosso Endereço</h3>
-              <p>Folha 31, quadra 11, lote 02 AV. VP08 - Nova Marabá, Marabá - PA, 68507-630</p>
+              <p>{{ setting('site.endereco')}}</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6">
             <div class="info-box  mb-4">
               <i class="bx bx-envelope"></i>
               <h3>Email</h3>
-              <p>mercadoativo@mercadoativo.com</p>              
+              <p>{{ setting('site.email')}}</p>              
             </div>
           </div>
           <div class="col-lg-3 col-md-6">
             <div class="info-box  mb-4">
               <i class="bx bx-phone-call"></i>
               <h3>Telefone</h3>
-              <p>(94) 9.9282-1103</p>
+              <p>{{ setting('site.telefone')}}</p>
             </div>
           </div>
         </div>
