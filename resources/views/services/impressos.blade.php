@@ -66,20 +66,20 @@
         </div>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-          {{-- <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-comunicacao_interna">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-1.jpg') }}"  class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Comunicação Interna</h4>
-                <p>Comunicação Interna</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-1.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Comunicação Interna"><i class="bx bx-plus"></i></a>
-                 
-                </div>
+        @foreach ($impressos as $impresso)
+        <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-comunicacao_interna">
+          <div class="portfolio-wrap">
+            <img src="{{ Voyager::image($impresso->image) }}"  class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>{{ $impresso->title }}</h4>
+              <p>{{ $impresso->description }}</p>
+              <div class="portfolio-links">
+                <a href="{{ Voyager::image($impresso->image) }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{ $impresso->title }}"><i class="bx bx-plus"></i></a>
               </div>
             </div>
-          </div> --}}
+          </div>
+        </div> 
+        @endforeach        
 
         </div>
       </div>

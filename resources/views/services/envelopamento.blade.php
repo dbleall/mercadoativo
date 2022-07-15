@@ -67,109 +67,23 @@
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-
-
+          @foreach ($envelopamentos as $envelopamento)
           <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-envelopamento">
             <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-4.jpg') }}" class="img-fluid" alt="">
+              <img src="{{ Voyager::image($envelopamento->image) }}" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Sport Mania</h4>
-                <p>Envelopamento</p>
+                <h4>{{ $envelopamento->title }}</h4>
+                <p>{{ $envelopamento->description }}</p>
                 <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-4.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sport Mania"><i class="bx-zoom-in"></i></a>
+                  <a href="{{ Voyager::image($envelopamento->image) }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{ $envelopamento->title }}"><i class="bx-zoom-in"></i></a>
                   {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-envelopamento">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-5.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Veiculo Longo</h4>
-                <p>Envelopamento</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-5.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Veiculo Longo"><i class="bx-zoom-in"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-         
-          <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-envelopamento">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-7.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Sk Net</h4>
-                <p>Envelopamento</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-7.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sk Net"><i class="bx-zoom-in"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
+          @endforeach
 
 
-          <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-envelopamento">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-12.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Sul Pará</h4>
-                <p>Envelopamento</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-12.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sul Pará"><i class="bx-zoom-in"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-        
-
-          <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-envelopamento">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-13.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>JCB</h4>
-                <p>Envelopamento</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-13.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="JCB"><i class="bx-zoom-in"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-envelopamento">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-14.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>A1</h4>
-                <p>Envelopamento</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-14.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="A1"><i class="bx-zoom-in"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-envelopamento">
-            <div class="portfolio-wrap">
-              <img src="{{ asset('img/portfolio/portfolio-15.jpg') }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>SK Net</h4>
-                <p>Envelopamento</p>
-                <div class="portfolio-links">
-                  <a href="{{ asset('img/portfolio/portfolio-15.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="SK Net"><i class="bx-zoom-in"></i></a>
-                  {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
 
       </div>
     </section><!-- End Portfolio Section -->

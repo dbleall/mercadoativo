@@ -6,8 +6,8 @@ use App\Client;
 use App\Portfolio;
 use App\Service;
 use App\Acrilico;
-use App\ComunicacaoInterna;
-use App\ComunicaoExterna;
+use App\Interna;
+use App\Comunicaoexterna;
 use App\Envelopamento;
 use App\Personalizado;
 use App\Impresso;
@@ -39,14 +39,14 @@ Route::get('services/acrilicos', function () {
 });
 
 Route::get('services/comunicacao_interna', function () {
-    $comunicacao_internas = ComunicacaoInterna::all();
-    return view('services.comunicacao_interna', compact('comunicacao_internas'));
+    $comunicacaointernas = Interna::all();
+    return view('services.comunicacao_interna', compact('comunicacaointernas'));
 });
 
 
 Route::get('services/comunicacao_externa', function () {
-    $comunicacao_externas = ComunicaoExterna::all();
-    return view('services.comunicacao_externa', compact('comunicacao_externas'));
+    $comunicacaoexternas = Comunicaoexterna::all();
+    return view('services.comunicacao_externa', compact('comunicacaoexternas'));
 });
 
 
@@ -62,7 +62,7 @@ Route::get('services/impressos', function () {
 
 Route::get('services/personalizados', function () {
     $personalizados = Personalizado::all();
-    return view('services.personalizados', compact('personalizado'));
+    return view('services.personalizados', compact('personalizados'));
 });
 
 Route::post('/send-message', [ContactController::class, 'sendEmail'])->name('contact.send');

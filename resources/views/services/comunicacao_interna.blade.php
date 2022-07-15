@@ -52,6 +52,7 @@
         <div class="row" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
+              
               <li data-filter="*" class="filter-active">Todos</li>
               {{-- <li data-filter=".filter-envelopamento">Envelopamento</li>
               <li data-filter=".filter-comunicacao_interna">Comunicação Interna</li>
@@ -63,15 +64,15 @@
           </div>
         </div>
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-            @foreach ($comunicacao_internas as $comunicacao_internas)
-            <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-comunicacao_interna">
+            @foreach ($comunicacaointernas as $comunicacaointerna)
+            <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-comunicacaointerna">
               <div class="portfolio-wrap">
-                <img src="{{ Voyager::image($comunicacao_internas->image) }}" class="img-fluid" alt="{{ $comunicacao_internas->title }}">
+                <img src="{{ Voyager::image($comunicacaointerna->image) }}" class="img-fluid" alt="{{ $comunicacaointerna->title }}">
                 <div class="portfolio-info">
-                  <h4>{{ $comunicacao_internas->title }}</h4>
-                  <p>{{ $comunicacao_internas->description }}</p>
+                  <h4>{{ $comunicacaointerna->title }}</h4>
+                  <p>{{ $comunicacaointerna->description }}</p>
                   <div class="portfolio-links">
-                    <a href="{{ Voyager::image($comunicacao_internas->image) }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{ $comunicacao_internas->title }}"><i class="bx bx-plus"></i></a>
+                    <a href="{{ Voyager::image($comunicacaointerna->image) }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{ $comunicacaointerna->title }}"><i class="bx bx-plus"></i></a>
                     {{-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> --}}
                   </div>
                 </div>
